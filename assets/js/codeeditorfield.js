@@ -112,6 +112,7 @@ var CodeEditorField = function ($, $field) {
         self.editor = ace.edit(self.$editor.get(0));
         self.editor.setTheme('ace/theme/' + self.options.theme);
         self.editor.session.setMode('ace/mode/' + self.options.mode);
+        self.editor.session.setValue(self.$field.text());
 
         // Adapt to the Panels font size
         self.editor.setOption('fontSize', '1em');
